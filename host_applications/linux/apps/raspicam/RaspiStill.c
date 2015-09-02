@@ -1950,6 +1950,8 @@ int main(int argc, const char **argv)
                   if (output_file != stdout)
                   {
                      rename_file(&state, output_file, final_filename, use_filename, frame);
+                     fprintf(stdout, "%s\n", final_filename); // XXX
+                     fflush(stdout);
                   }
                   else
                   {
